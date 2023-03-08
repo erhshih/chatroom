@@ -1,0 +1,395 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
+input {
+  border: 1px solid #eee;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.nickname {
+  line-height: 30px;
+  width: 100%;
+  border: 1px solid #203a37;
+}
+
+@-webkit-keyframes fColorAni {
+  0% {
+    color: #203a37;
+  }
+  50% {
+    color: #46b0ff;
+  }
+  100% {
+    color: #333;
+  }
+}
+
+@keyframes fColorAni {
+  0% {
+    color: #203a37;
+  }
+  50% {
+    color: #46b0ff;
+  }
+  100% {
+    color: #333;
+  }
+}
+
+.dis-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.web {
+  width: 100%;
+  height: 100%;
+}
+
+.web .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 0;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.web .content .header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 4%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.web .content .header-top .chat-header {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.web .content .header-top .addchat img {
+  width: 35px;
+}
+
+.web .content .header {
+  -webkit-box-shadow: 1px -1px 2px 2px #eee;
+          box-shadow: 1px -1px 2px 2px #eee;
+  line-height: 40px;
+  height: 40px;
+  font-size: 24px;
+  z-index: 10;
+  background: #fff;
+}
+
+.web .content .body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: auto;
+  -webkit-box-shadow: 1px 1px 1px #eee;
+          box-shadow: 1px 1px 1px #eee;
+}
+
+.web .content .footer {
+  -webkit-box-shadow: 1px 1px 8px #eee;
+          box-shadow: 1px 1px 8px #eee;
+  height: 60px;
+}
+
+.web .left {
+  width: 220px;
+}
+
+.web .left .aside {
+  height: 100%;
+}
+
+.web .left .tabbar label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.web .left .tabbar label.active {
+  color: #203a37;
+}
+
+.web .left .tabbar label:last-child {
+  border-left: 1px solid #eee;
+}
+
+.web .left .tabbar label.unread {
+  -webkit-animation: fColorAni 0.3s infinite;
+          animation: fColorAni 0.3s infinite;
+}
+
+.web .left .user-list {
+  top: 0;
+}
+
+.web .left .func label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.web .left .func label:last-child {
+  border-left: 1px solid #eee;
+}
+
+.web .left .user {
+  line-height: 40px;
+  padding: 0 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.web .left .user.offline {
+  color: #ccc;
+}
+
+.web .left .user.online {
+  color: #333;
+}
+
+.web .left .user.ani {
+  -webkit-animation: fColorAni 0.3s 5;
+          animation: fColorAni 0.3s 5;
+}
+
+.web .left .user .tips-num {
+  height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+  background: #203a37;
+  min-width: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  line-height: 18px;
+  text-align: center;
+}
+
+.web .left .user .add-group {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100%;
+  color: #203a37;
+  border: 1px solid #203a37;
+  cursor: pointer;
+}
+
+.web .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.web .right .title {
+  padding-left: 20px;
+}
+
+.web .right .body {
+  padding: 10px 20px;
+}
+
+.web .right .record .join-tips {
+  position: relative !important;
+  display: block;
+  color: #cccccc;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  left: 0 !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.web .right .record .li {
+  margin-bottom: 15px;
+  position: relative;
+  text-align: left;
+  color: #46b0ff;
+}
+
+.web .right .record .li:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.web .right .record .li .message-date {
+  font-size: 16px;
+  color: #b9b8b8;
+}
+
+.web .right .record .li .message-date .m-nickname {
+  color: #46b0ff;
+}
+
+.web .right .record .li.user {
+  text-align: right;
+  color: #203a37;
+}
+
+.web .right .record .li.user .message-date .m-nickname {
+  color: #203a37;
+}
+
+.web .right .record .message-box {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.web .right .footer input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px;
+  font-size: 24px;
+}
+
+.web .right .footer button {
+  width: 200px;
+  background: #203a37;
+  color: #fff;
+  font-size: 24px;
+}
+
+div.my-el-message {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4000;
+}
+
+div.my-el-message.success .my-el-message__group {
+  background-image: url("./assets/success.svg");
+}
+
+div.my-el-message .el-message-cover {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  z-index: 4001;
+}
+
+div.my-el-message .my-el-message__group {
+  margin: 0;
+  background: #ffffff url("./assets/warn.svg") no-repeat 17px center;
+  background-size: 20px 20px;
+  top: 50%;
+  border-radius: 6px;
+  padding: 0 40px 0 52px;
+  z-index: 4002;
+  height: 60px;
+  overflow: hidden;
+  line-height: 60px;
+  position: fixed;
+  min-width: 350px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  -webkit-animation: myshow 0.2s;
+          animation: myshow 0.2s;
+}
+
+div.my-el-message .my-el-message__group p {
+  margin: 0;
+  color: #333333;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+div.my-el-message .my-el-message__group .my-el-message-close {
+  width: 15px;
+  height: 15px;
+  background: url("./assets/close.svg") no-repeat;
+  background-size: 15px 15px;
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes myshow {
+  from {
+    -webkit-transform: scale(0) translateX(-100%);
+            transform: scale(0) translateX(-100%);
+  }
+  to {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
+}
+
+@keyframes myshow {
+  from {
+    -webkit-transform: scale(0) translateX(-100%);
+            transform: scale(0) translateX(-100%);
+  }
+  to {
+    -webkit-transform: scale(1) translateX(-50%);
+            transform: scale(1) translateX(-50%);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  height: 50px;
+  outline-offset: -2px;
+  outline: 2px solid #fff;
+  -webkit-border-radius: 4px;
+  border: 2px solid #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/*# sourceMappingURL=App.css.map */
